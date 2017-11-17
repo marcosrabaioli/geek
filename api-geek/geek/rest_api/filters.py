@@ -1,0 +1,3 @@
+from .Filters.DollarQuotationFilter import DollarQuotationFilter
+from .Filters.EuroQuotationFilter import EuroQuotationFilter
+from .Filters.BitcoinQuotationFilter import BitcoinQuotationFilter
