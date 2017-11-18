@@ -91,11 +91,8 @@ WSGI_APPLICATION = 'geek.wsgi.application'
 
 DATABASE_URL = 'postgres://vghlsexjxwupbo:076f7803707c67af11ace1f34963869f5d520964d5b49aa4c368b63b1cc32570@ec2-54-83-19-82.compute-1.amazonaws.com:5432/d6ngdvgv6qfahg'
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config(DATABASE_URL)
-    )
-}
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 
