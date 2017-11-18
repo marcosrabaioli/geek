@@ -78,18 +78,17 @@ WSGI_APPLICATION = 'geek.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'geekdb',
-#        'USER': 'geeknuser',
-#        'PASSWORD': 'geekpass',
-#        'HOST': 'localhost',
-#        'PORT': '',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'geekdb',
+        'USER': 'geeknuser',
+        'PASSWORD': 'geekpass',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
-DATABASE_URL = 'postgres://vghlsexjxwupbo:076f7803707c67af11ace1f34963869f5d520964d5b49aa4c368b63b1cc32570@ec2-54-83-19-82.compute-1.amazonaws.com:5432/d6ngdvgv6qfahg'
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
