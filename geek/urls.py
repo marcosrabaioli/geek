@@ -21,7 +21,7 @@ from rest_framework.permissions import AllowAny
 
 
 
-schema_view = get_schema_view(title='C-Brain API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer], permission_classes=[AllowAny])
+schema_view = get_schema_view(title='Geek API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer], permission_classes=[AllowAny])
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

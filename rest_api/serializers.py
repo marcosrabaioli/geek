@@ -1,3 +1,3 @@
-from .Serializers.DollarQuotationSerializer import DollarQuotationSerializer
-from .Serializers.EuroQuotationSerializer import *
-from .Serializers.BitcoinQuotationSerializer import BitcoinQuotation
+from rest_api.Serializers.DollarQuotationSerializer import DollarQuotationSerializer
+from rest_api.Serializers.EuroQuotationSerializer import *
+from rest_api.Serializers.BitcoinQuotationSerializer import BitcoinQuotation

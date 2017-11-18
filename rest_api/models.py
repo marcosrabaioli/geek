@@ -1,3 +1,3 @@
-from .Models.DollarQuotationModel import DollarQuotation
-from .Models.EuroQuotationModel import EuroQuotation
-from .Models.BitcoinQuotationModel import BitcoinQuotation
+from rest_api.Models.DollarQuotationModel import DollarQuotation
+from rest_api.Models.EuroQuotationModel import EuroQuotation
+from rest_api.Models.BitcoinQuotationModel import BitcoinQuotation

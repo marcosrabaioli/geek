@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_api',
     'rest_framework_swagger',
-    'django_filters'
+    'django_filters',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'geek.urls'
@@ -81,6 +84,7 @@ WSGI_APPLICATION = 'geek.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'geekdb',
         'USER': 'geeknuser',
         'PASSWORD': 'geekpass',
@@ -121,3 +125,5 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import BitcoinQuotation
+from rest_api.models import BitcoinQuotation
 
 class BitcoinQuotationSerializer(serializers.ModelSerializer):
 

@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-import datetime
+from django.utils import timezone
 from django.conf import settings
 import requests
 from rest_api.models import DollarQuotation, EuroQuotation, BitcoinQuotation
@@ -14,21 +14,21 @@ class Command(BaseCommand):
 
             data = r.json()
 
-            dollar = DollarQuotation(date = datetime.datetime.now(),
+            dollar = DollarQuotation(date = timezone.now(),
                                      buy = data['results']['currencies']['USD']['buy'],
                                      sell = data['results']['currencies']['USD']['sell'],
                                      variation = data['results']['currencies']['USD']['variation'])
 
             dollar.save()
 
-            euro = EuroQuotation(date=datetime.datetime.now(),
+            euro = EuroQuotation(date=timezone.now(),
                                      buy=data['results']['currencies']['EUR']['buy'],
                                      sell=data['results']['currencies']['EUR']['sell'],
                                      variation=data['results']['currencies']['EUR']['variation'])
 
             euro.save()
 
-            bitcoin = BitcoinQuotation(date=datetime.datetime.now(),
+            bitcoin = BitcoinQuotation(date=timezone.now(),
                                      buy=data['results']['currencies']['BTC']['buy'],
                                      sell=data['results']['currencies']['BTC']['sell'],
                                      variation=data['results']['currencies']['BTC']['variation'])

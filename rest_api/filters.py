@@ -1,3 +1,3 @@
-from .Filters.DollarQuotationFilter import DollarQuotationFilter
-from .Filters.EuroQuotationFilter import EuroQuotationFilter
-from .Filters.BitcoinQuotationFilter import BitcoinQuotationFilter
+from rest_api.Filters.DollarQuotationFilter import DollarQuotationFilter
+from rest_api.Filters.EuroQuotationFilter import EuroQuotationFilter
+from rest_api.Filters.BitcoinQuotationFilter import BitcoinQuotationFilter

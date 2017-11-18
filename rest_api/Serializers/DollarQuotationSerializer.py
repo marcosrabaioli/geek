@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import DollarQuotation
+from rest_api.models import DollarQuotation
 
 class DollarQuotationSerializer(serializers.ModelSerializer):
 
