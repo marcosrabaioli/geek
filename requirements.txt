@@ -11,7 +11,7 @@ Django==1.11.5
 django-filter==1.1.0
 django-oauth-toolkit==1.0.0
 django-rest-swagger==2.1.2
-djangorestframework==3.7.0
+djangorestframework==3.11.2
 Fabric==1.14.0
 fake==0.8
 Faker==0.8.6
